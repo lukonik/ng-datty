@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ng-datty",
       "sourceRoot": "projects/ng-datty/src",
-      "prefix": "lib",
+      "prefix": "dt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -28,7 +28,8 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/ng-datty/tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "main": "projects/ng-datty/src/test.ts"
           }
         },
         "lint": {

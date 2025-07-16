@@ -1,22 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { fireEvent, render, screen } from '@testing-library/angular';
+import { CounterComponent } from './ng-datty.component';
 
-import { NgDattyComponent } from './ng-datty.component';
+describe('Counter', () => {
+  it('should render counter', async () => {
+    await render(CounterComponent, {
+      inputs: {
+        counter: 5,
+        hello: 'Hello Alias!',
+      },
+    });
 
-describe('NgDattyComponent', () => {
-  let component: NgDattyComponent;
-  let fixture: ComponentFixture<NgDattyComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [NgDattyComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(NgDattyComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    expect(screen.getByText('Current Count: 5')).toBeVisible();
+    expect(screen.getByText('Hello Alias!')).toBeVisible();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should increment the counter on click', async () => {
+    await render(CounterComponent, { inputs: { counter: 5 } });
+
+    const incrementButton = screen.getByRole('button', { name: '+' });
+    fireEvent.click(incrementButton);
+
+    expect(screen.getByText('Current Count: 6')).toBeVisible();
   });
 });
