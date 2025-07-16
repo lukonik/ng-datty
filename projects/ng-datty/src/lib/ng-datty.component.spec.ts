@@ -8,9 +8,8 @@ describe('NgDattyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NgDattyComponent]
-    })
-    .compileComponents();
+      imports: [NgDattyComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NgDattyComponent);
     component = fixture.componentInstance;

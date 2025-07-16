@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'lib-ng-datty',
   imports: [],
   template: `
-    <p>
-      ng-datty works!
-    </p>
+    <p>ng-datty works!</p>
   `,
-  styles: ``
+  styles: ``,
 })
-export class NgDattyComponent {
-
-}
+export class NgDattyComponent {}

@@ -10,9 +10,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "ng-datty": [
-        "./dist/ng-datty"
-      ]
+      "ng-datty": ["./dist/ng-datty"]
     },
     "skipLibCheck": true,
     "isolatedModules": true,
