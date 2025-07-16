@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - alpha
+  pull_request:
+
+jobs:
+  angular-ci:
+    name: Angular CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build:ng-datty
+
+      - name: Test
+        run: npm run test -- --watch=false --browsers=ChromeHeadless --no-progress --code-coverage
