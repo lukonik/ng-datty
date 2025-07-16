@@ -10,7 +10,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:ng-datty":"ng build --project=ng-datty"
   },
   "private": true,
   "dependencies": {

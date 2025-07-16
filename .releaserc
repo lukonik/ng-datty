@@ -1,3 +1,20 @@
 {
-  "dryRun": true
+  "dryRun": true,
+   "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "dist/ng-datty"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": ["dist/ng-datty/**"]
+        }
+      ]
+    ]
 }
