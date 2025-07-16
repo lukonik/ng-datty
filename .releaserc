@@ -1,18 +1,25 @@
 {
-   "plugins": [
+  "plugins": [
+    [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist/ng-datty"
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": ["dist/ng-datty/**"]
-        }
-      ]
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "dist/ng-datty"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          "dist/ng-datty/**"
+        ]
+      }
     ]
+  ]
 }
