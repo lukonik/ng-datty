@@ -5,6 +5,9 @@
     "type": "git",
     "url": "https://github.com/lukonik/ng-datty"
   },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project=docs",
@@ -53,6 +56,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^16.1.2",
     "ng-packagr": "^19.2.0",
     "prettier": "3.6.2",
     "semantic-release": "^24.2.7",
