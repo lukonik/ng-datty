@@ -19,7 +19,8 @@
     "format:write": "npx prettier . --write",
     "serve:ssr:docs": "node dist/docs/server/server.mjs",
     "lint": "ng lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "ng deploy"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +48,7 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "angular-cli-ghpages": "^2.0.3",
     "angular-eslint": "20.1.1",
     "eslint": "^9.29.0",
     "husky": "^9.1.7",
