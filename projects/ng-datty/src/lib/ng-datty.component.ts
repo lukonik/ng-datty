@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, input, model } from '@angular/core';
 
 @Component({
-  selector: 'lib-ng-datty',
-  imports: [],
+  selector: 'dt-counter',
   template: `
-    <p>ng-datty works!</p>
+    <span>{{ hello() }}</span>
+    <button (click)="decrement()">-</button>
+    <span>Current Count: {{ counter() }}</span>
+    <button (click)="increment()">+</button>
   `,
-  styles: ``,
 })
-export class NgDattyComponent {}
+export class CounterComponent {
+  counter = model(0);
+  hello = input('Hi');
+
+  increment() {
+    this.counter.set(this.counter() + 1);
+  }
+
+  decrement() {
+    this.counter.set(this.counter() - 1);
+  }
+}
