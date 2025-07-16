@@ -27,6 +27,9 @@ jobs:
       - name: Prettier check
         run: npm run format:check
 
+      - name: Lint
+        run: npm run lint
+
       - name: Build
         run: npm run build:ng-datty
 

@@ -30,6 +30,13 @@
             "tsConfig": "projects/ng-datty/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/ng-datty/**/*.ts", "projects/ng-datty/**/*.html"],
+            "eslintConfig": "projects/ng-datty/eslint.config.js"
+          }
         }
       }
     },
@@ -114,6 +121,13 @@
             ],
             "styles": ["projects/docs/src/styles.css"],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/docs/**/*.ts", "projects/docs/**/*.html"],
+            "eslintConfig": "projects/docs/eslint.config.js"
           }
         }
       }
