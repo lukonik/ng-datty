@@ -129,6 +129,12 @@
             "lintFilePatterns": ["projects/docs/**/*.ts", "projects/docs/**/*.html"],
             "eslintConfig": "projects/docs/eslint.config.js"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildTarget": "docs:build:production"
+          }
         }
       }
     }
