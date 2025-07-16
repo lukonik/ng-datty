@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - alpha
-  pull_request:1313
+  pull_request:
 
 jobs:
   angular-ci:
